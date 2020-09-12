@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardTitle, CardBody} from 'reactstrap';
+import { Card, CardImg, CardTitle, CardBody, CardText } from 'reactstrap';
 
 class CampsiteInfo extends Component {
 
@@ -7,11 +7,11 @@ class CampsiteInfo extends Component {
     renderCampsite(campsite) {
         return (
             <div className="col-md-5 m-1">
-                    <Card onClick={() => this.onCampsiteSelect(campsite)}>
+                    <Card>
                         <CardImg width="100%" src={campsite.image} alt={campsite.name} />
                         <CardBody>
                             <CardTitle>{campsite.name}</CardTitle>
-                            {campsite.description}
+                            <CardText>{campsite.description}</CardText>
                         </CardBody>
                     </Card>
             </div>
